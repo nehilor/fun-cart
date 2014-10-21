@@ -1,1 +1,1 @@
-$(function(){$("#app-title").load("app-title.html"),$("#list").load("list.html"),$("#checkout-box").load("checkout-box.html")});
+$(function(){$("#app-title").load("/_/html/app-title.html"),$("#list").load("/_/html/list.html"),$("#checkout-box").load("/_/html/checkout-box.html")});
