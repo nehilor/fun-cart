@@ -1,0 +1,1 @@
+var app=app||{};app.listItemCollection=Backbone.Collection.extend({model:app.listItem});

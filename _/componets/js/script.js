@@ -1,5 +1,5 @@
- $(function(){
-      $("#app-title").load("/_/html/app-title.html"); 
-      $("#list").load("/_/html/list.html"); 
-      $("#checkout-box").load("/_/html/checkout-box.html"); 
-    });
+$(function(){
+    $("#fun-app-title").load("/_/html/app-title.html"); 
+    $("#fun-list").load("/_/html/list.html"); 
+    $("#fun-checkout-box").load("/_/html/checkout-box.html"); 
+});

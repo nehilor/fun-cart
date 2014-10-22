@@ -1,0 +1,1 @@
+var itemName=new app.listItem({text:"Yeah :) "}),textTest=new app.listItemCollection(itemName),textTestView=new app.listItemModelView({collection:textTest});$("#list").html(textTestView.render().el);

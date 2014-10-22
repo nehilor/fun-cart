@@ -1,0 +1,1 @@
+var app=app||{};app.listItemTemplateView=Backbone.View.extend({tagName:"li",template:_.template($("#list-template").html()),render:function(){var t=this.template(this.model.toJSON());return this.$el.html(t),this}});
