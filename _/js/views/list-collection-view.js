@@ -1,1 +1,1 @@
-var app=app||{};app.listItemModelView=Backbone.View.extend({className:"item",render:function(){return this.collection.each(this.additem,this),this},addText:function(e){var t=new app.listItemTemplateView({model:e});this.$el.append(t.render().el)}});
+var app=app||{};app.listItemModelView=Backbone.View.extend({className:"list",tagName:"ul",render:function(){return this.collection.each(this.addItem,this),this},addItem:function(list){var listItemView=new app.listItemTemplateView({model:list});this.$el.append(listItemView.render().el)}});

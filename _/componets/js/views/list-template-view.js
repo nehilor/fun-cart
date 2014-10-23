@@ -2,8 +2,8 @@ var app = app || {};
 
 app.listItemTemplateView = Backbone.View.extend({
 
-  
   tagName: "li",
+  className: "item",
 
   template: _.template( $("#list-template").html() ),
 

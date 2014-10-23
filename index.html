@@ -8,16 +8,23 @@
     <link href='http://fonts.googleapis.com/css?family=Abel|Raleway' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-
-    <!-- Style core CSS -->
+<!-- Style core CSS -->
     <link rel="stylesheet" href="_/css/bootstrap.css">
     <link rel="stylesheet" href="_/css/style.css">
   </head>
   <body>
 
     <div id="fun-app-title"></div>
-    <div id="fun-list"></div>
-    <div id="fun-checkuot-box"></div>
+  	<div id="list"></div>
+    <div id="box"></div> 
+			
+<!-- Script templates -->		
+ 	  <script type="text/template" id="list-template">
+      <img src="<%= img %>" alt="<%= name %>"/>
+      <p><%= item %></p>
+      <button type="button" class="btn btn-default"><i class="fa fa-plus"></i></button>
+      <span>$ <%= price %></span>
+    </script>  
 
 <!-- Script core JS -->
     <script src="_/js/libs/bootstrap.js"></script>
@@ -29,3 +36,4 @@
     <script src="_/js/listApp.js"></script>
   </body>
 </html>
+

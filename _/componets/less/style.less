@@ -1,6 +1,65 @@
-//colors
+//colors variables
 @header: #333;
 
+//grid variables
+@min-width-sm: 768px;
+@min-width-md: 992px;
+@min-width-lg: 1200px;
+@width-sm: 750px;
+@width-md: 970px;
+@width-lg: 1170px;
+
+//General classes
+.margin-padding-lr{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.margin-padding-b{
+	margin-bottom: 15px !important;
+	padding-bottom: 15px !important;
+	padding-top: 15px !important;
+}
+.btn{
+	margin-top: 15px !important;
+	border-radius: 50% !important;
+	float: right;
+
+}	
+
+//ClassStyle
 .page-header{
 	color:@header;
+	font-family: 'Abel', sans-serif;
+}
+.list{
+	list-style-type: none;
+	.margin-padding-lr;
+    @media (min-width: @min-width-sm) {width: @width-sm};
+    @media (min-width: @min-width-md) {width: @width-md};
+    @media (min-width: @min-width-lg) {width: @width-lg};
+	
+}
+.item {
+	float: left;
+    border: 1px solid #eeeeee;
+    font-family: 'Raleway', sans-serif;
+    .margin-padding-b;
+    .margin-padding-lr;
+	@media (min-width: @min-width-sm) {width: 58.33333333%};
+    @media (min-width: @min-width-md) {width: 58.33333333%};
+    @media (min-width: @min-width-lg) {width: 58.33333333%};
+}
+
+//tag styles
+span{
+	margin-top: 20px !important;
+	float: right;
+	.margin-padding-lr;
+
+}
+p{
+	display: inline;
+	.margin-padding-lr;
 }

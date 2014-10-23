@@ -3,17 +3,17 @@ var app = app || {};
 
 app.listItemModelView = Backbone.View.extend({
 
-
-  className: "item",
+  className: "list",
+  tagName: "ul",
 
   render: function() {
- 	  this.collection.each(this.additem, this);
+ 	  this.collection.each(this.addItem, this);
  		return this;
   },
 
- addText: function(item) {
- 		var listItemModelView = new app.listItemTemplateView ({ model: item });
- 		this.$el.append(listItemModelView.render().el);
+ addItem: function(list) {
+ 		var listItemView = new app.listItemTemplateView ({ model: list });
+ 		this.$el.append(listItemView.render().el);
  }
 
 });
