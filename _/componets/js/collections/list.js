@@ -4,6 +4,11 @@ var app = app || {};
 app.listItemCollection = Backbone.Collection.extend({
 
   // What type of models are in this collection?
-  model: app.listItem
+  model: app.listItem,
+});
 
+app.boxCollection = Backbone.Collection.extend({
+
+  // What type of models are in this collection?
+  model: app.box,
 });

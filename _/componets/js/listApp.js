@@ -13,8 +13,16 @@ var itemName02 = new app.listItem({
   name: "item02",
   price: "25.50"
 });
-var displayItems = new app.listItemCollection([itemName01, itemName02]);
+var itemName03 = new app.listItem({
+
+  img: "_/img/item.jpg",
+  name: "item02",
+  price: "25.50"
+});
+var displayItems = new app.listItemCollection([itemName01, itemName02, itemName03]);
 
 var textTestView = new app.listItemModelView({ collection: displayItems});
 
 $("#list").html(textTestView.render().el);
+
+

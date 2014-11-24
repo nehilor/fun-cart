@@ -1,1 +1,1 @@
-var app=app||{};app.listItemCollection=Backbone.Collection.extend({model:app.listItem});
+var app=app||{};app.listItemCollection=Backbone.Collection.extend({model:app.listItem}),app.boxCollection=Backbone.Collection.extend({model:app.box});

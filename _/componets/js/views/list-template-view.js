@@ -12,7 +12,15 @@ app.listItemTemplateView = Backbone.View.extend({
     this.$el.html(ItemTemplate);
     return this;
   },
+});
 
-  
+app.boxTemplateView = Backbone.View.extend({
 
+  template: _.template( $("#box-template").html() ),
+
+  render: function() {
+    var boxTemplate = this.template(this.model.toJSON());
+    this.$el.html(boxTemplate);
+    return this;
+  },
 });
