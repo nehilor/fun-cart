@@ -1,0 +1,15 @@
+var app = app || {};
+app.listItem = Backbone.Model.extend({
+
+  defaults: {
+    item: "hey hey hey"
+  }
+});
+
+var app = app || {};
+app.box = Backbone.Model.extend({
+
+  defaults: {
+    item: "Your cart is empty"
+  }
+});
