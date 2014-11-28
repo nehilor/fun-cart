@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fun-cart app</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Abel|Raleway' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Style core CSS -->
+    <link rel="stylesheet" href="_/css/bootstrap.css">
+    <link rel="stylesheet" href="_/css/style.css">
+  </head>
+  <body>
+
+    <div id="fun-app-title"></div>
+    <div class="body">
+      <div id="list"></div>
+      <div id="box">
+        <div class="box">
+          <h2>Your FUN CART</h2>
+          <ul id="box-list"></ul>
+          <div id="total"></div>
+        </div>
+      </div> 
+    </div>
+  	
+			
+<!-- Script templates -->		
+ 	  <script type="text/template" id="list-template">
+      <img src="<%= img %>" alt="<%= name %>"/>
+      <p><%= item %></p>
+      <button type="button" class="btn btn-add"><i class="fa fa-plus"></i></button>
+      <span>&dollar; <%= price %></span>
+    </script>  
+
+    <script type="text/template" id="box-template">
+      <p><%= item %></p>
+      <span><i class="fa fa-trash"></i></span> 
+      <span>&dollar; <%= price %></span> 
+    </script>
+
+    <script type="text/template" id="total-template">
+      <h3> Total $ <%= total%></h3>
+      <button type="button" class="btn btn-success">CHECKOUT</button>
+    </script>
+    
+
+
+<!-- Script core JS -->
+    <script src="_/js/libs/bootstrap.js"></script>
+    <script src="_/js/models/list-model.js"></script>
+    <script src="_/js/views/list-template-view.js"></script>
+    <script src="_/js/views/list-collection-view.js"></script>
+    <script src="_/js/collections/list.js"></script>
+    <script src="_/js/script.js"></script>
+    <script src="_/js/listApp.js"></script>
+  </body>
+</html>
+

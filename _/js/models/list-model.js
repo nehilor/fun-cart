@@ -1,0 +1,1 @@
+var app=app||{};app.listItem=Backbone.Model.extend({defaults:{item:"hey hey hey",plus:!1},toggle:function(){this.save({item:!this.get("item")})}}),app.box=Backbone.Model.extend({defaults:{item:"Your cart is empty"}}),app.total=Backbone.Model.extend({defaults:{total:"00.00"}});
