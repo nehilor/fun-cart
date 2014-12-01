@@ -1,4 +1,12 @@
 /**
+ * Fun namespace object
+ */
+var fun = {
+    utils: {},
+    strings: {},
+};
+
+/**
 * Checks on the strings object for the specified key.
 * If the value doesn't exist the key is returned
 * @param string key for the translation requested
