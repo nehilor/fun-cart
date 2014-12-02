@@ -11,21 +11,12 @@ app.listItemTemplateView = Backbone.View.extend({
     'click .fa-plus': 'addCartItem',
   },
 
-  initialize: function() {
-    this.listenTo(this.model, 'add', this.filter);
-  },
-
   render: function() {
     var ItemTemplate = this.template(this.model.toJSON());
     this.$el.html(ItemTemplate);
     return this;
   },
 
-  add: function () {},
-
-  filter: function(funcart) {
-    cart.trigger('')
-  }
 });
 //items in the cart template view
 app.boxTemplateView = Backbone.View.extend({
