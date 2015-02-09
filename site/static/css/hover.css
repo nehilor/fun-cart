@@ -1,0 +1,103 @@
+/* ---------------------------------------------*/
+.fun-link-fade{
+position: relative;
+display: inline-block;
+vertical-align: top;
+margin-bottom: 5px;
+opacity: 1;
+}
+.fun-link-fade:hover{border-radius: 50%}
+.fun-link-fade .funWrapper{z-index:1;}
+.fun-link-fade .fun-top-line{z-index:0}
+.fun-link-fade .funWrapper, .fun-link-fade .fun-top-line{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+text-align:center;
+color:#00cccc;
+background: #333;
+visibility:hidden; /* lt-ie9 */
+opacity: 0.2;
+border-radius: 50%;
+}
+.fun-link-fade .funWrapper, .fun-link-fade .fun-top-line{
+transition:all 0.4s ease;
+-moz-transition:all 0.4s ease;
+-ms-transition:all 0.4s ease;
+-o-transition:all 0.4s ease;
+-webkit-transition:all 0.4s ease;
+overflow: hidden;
+opacity:0;
+}
+.fun-link-fade:hover .funWrapper, .fun-link-fade:hover .fun-top-line{
+opacity:0.8;
+visibility:visible; /* lt-ie9 */
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Animation effects
+/*-----------------------------------------------------------------------------------*/
+.funAnimate-go{
+text-decoration:none;
+}
+.funAnimate{
+transition:all 0.5s;
+-moz-transition:all 0.5s;
+-ms-transition:all 0.5s;
+-o-transition:all 0.5s;
+-webkit-transition:all 0.5s;
+visibility:hidden; /* lt-ie9 */
+}
+/* lt-ie9 */
+.funAnimate-go:hover .funAnimate{
+visibility:visible;
+}
+.fun-from-top{
+position:relative;
+top:-100%;
+border: 2px solid #00cccc;
+padding: 7.5px;
+background:#444;
+}
+.funAnimate-go:hover .fun-from-top{
+top:35%;
+display: inherit;
+}
+h4.fun-demo{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+}
+.fun-scale{
+position:relative;
+transform:scale(0);
+-moz-transform:scale(0);
+-ms-transform:scale(0);
+-o-transform:scale(0);
+-webkit-transform:scale(0);
+}
+.funAnimate-go:hover .fun-scale{
+transform:scale(1);
+-moz-transform:scale(1);
+-ms-transform:scale(1);
+-o-transform:scale(1);
+-webkit-transform:scale(1);
+}
+.fun-opacity{
+opacity:0;
+}
+.funAnimate-go:hover .fun-opacity{
+opacity:1;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Delay
+/*-----------------------------------------------------------------------------------*/
+.fun-delay02{
+transition-delay:0.2s !important;
+-moz-transition-delay:0.2s !important;
+-ms-transition-delay:0.2s !important;
+-o-transition-delay:0.2s !important;
+-webkit-transition-delay:0.2s !important;
+}
