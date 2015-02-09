@@ -1,1 +1,0 @@
-var app=app||{};app.listItemCollection=Backbone.Collection.extend({model:app.listItem,item:function(){return this.where({plus:!0})}}),app.boxCollection=Backbone.Collection.extend({model:app.box}),app.totalCollection=Backbone.Collection.extend({model:app.total});

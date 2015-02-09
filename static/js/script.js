@@ -1,1 +1,0 @@
-$(function(){$("#fun-app-title").load("/_/html/app-title.html")});
