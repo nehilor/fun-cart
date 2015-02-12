@@ -42,7 +42,7 @@ mongoose.connect( 'mongodb://localhost/cart_database' );
 //schemas
 var Item = new mongoose.Schema({
 	name: String,
-	despription: String,
+	description: String,
 	price: Number,
 	path: String,
 	stock: Number
@@ -62,6 +62,25 @@ app.get( '/api/items', function( request, response ) {
 	});
 });
 
+//Insert a new item
+app.post( '/api/items', function( request, response ) {
+	var item = new ItemModel({
+		name: request.body.name,
+		description: request.body.description,
+		price: request.body.price,
+		path: request.body.path,
+		stock: request.body.stock
+	});
+	item.save( function( err ) {
+		if( !err ) {
+			return console.log( 'created' );
+		} else {
+			return console.log( err );
+		}
+	});
+	return response.send( book );
+});
+
 //get a single item by id
 app.get('/app/items/:id', function( request, response ) {
 	return ItemModel.findById( request.params.id, function( err, item ) {
@@ -73,16 +92,25 @@ app.get('/app/items/:id', function( request, response ) {
 	});
 });
 
-//post an item
-app.post( '/api/items', function( request, response ) {
-	var item = new ItemModel({
-		name: request.body.name,
-		despription: request.body.despription,
-		price: request.body.price,
-		path: request.body.path,
-		stock: request.body.stock
+//update an item
+app.put( '/api/items/:id', function( request, response ) {
+	console.log( 'Updating item' + request.body.name );
+	return ItemModel.findById( request.params.id, function( err, item ) {
+		item.name = request.body.name;
+		item.description = request.body.description;
+		item.price = request.body.price;
+		item.path = request.body.path;
+		item.stock = request.body.stock;
+
+		return item.save( function( err ){
+			if( !err ){
+				console.log( 'item updated' );
+			} else {
+				console.log ( err );
+			}
+			return response.send( item );
+		});
 	});
-	return response.send( item);
 });
 
 //delete an item
@@ -97,4 +125,16 @@ app.delete( '/api/items/:id', function( request, response ) {
 			}
 		});
 	});
+});
+
+//post an item
+app.post( '/api/items', function( request, response ) {
+	var item = new ItemModel({
+		name: request.body.name,
+		description: request.body.description,
+		price: request.body.price,
+		path: request.body.path,
+		stock: request.body.stock
+	});
+	return response.send( item);
 });
