@@ -30,8 +30,6 @@ require.config({
 		bootstrap: 'libs/bootstrap/bootstrap-min',
 		templates: '../html',
 		text: 'text',
-		firebase: '../bower_components/firebase/firebase',
-		backbonefire: 'backbonefire'
 	}
 });
 
