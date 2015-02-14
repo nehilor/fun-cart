@@ -6,7 +6,6 @@ fun.strings = {
     funTitle : 'Shopping cart',
     funSubTitle : 'just a fun app with backbone', 
 
-    funDollar : '$ '
-    funAdd : '+',
+    funDollar : '$',
 
 }
