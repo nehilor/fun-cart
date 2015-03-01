@@ -51,7 +51,7 @@ var Item = new mongoose.Schema({
 //models
 var ItemModel = mongoose.model( 'Item', Item );
 
-//get a list of all items
+//get a list of all items ---done
 app.get( '/api/items', function( request, response ) {
 	return ItemModel.find( function( err, items ){
 		if( !err ) {
@@ -62,7 +62,7 @@ app.get( '/api/items', function( request, response ) {
 	});
 });
 
-//Insert a new item
+//Insert a new item ----done
 app.post( '/api/items', function( request, response ) {
 	var item = new ItemModel({
 		name: request.body.name,
@@ -78,13 +78,13 @@ app.post( '/api/items', function( request, response ) {
 			return console.log( err );
 		}
 	});
-	return response.send( book );
+	return response.send( item );
 });
 
-//get a single item by id
-app.get('/app/items/:id', function( request, response ) {
+//get a single item by id ----done
+app.get( '/api/items/:id', function( request, response ) {
 	return ItemModel.findById( request.params.id, function( err, item ) {
-		if( !err) {
+		if( !err ) {
 			return response.send( item );
 		} else {
 			return console.log( err );
@@ -92,7 +92,7 @@ app.get('/app/items/:id', function( request, response ) {
 	});
 });
 
-//update an item
+//update an item ----done
 app.put( '/api/items/:id', function( request, response ) {
 	console.log( 'Updating item' + request.body.name );
 	return ItemModel.findById( request.params.id, function( err, item ) {
@@ -115,26 +115,16 @@ app.put( '/api/items/:id', function( request, response ) {
 
 //delete an item
 app.delete( '/api/items/:id', function( request, response ) {
-	console.log( 'Deleting item with id: ' + request.params.id );
-	return ItemModel.findById( request.params.id, function( err, item ) {
-		return item.remove( function( err ){
-			if( err ){
-				console.log( 'Item removed' );
-			} else{
-				console.log( err );
-			}
-		});
-	});
+    console.log( 'Deleting item with id: ' + request.params.id );
+    return ItemModel.findById( request.params.id, function( err, item ) {
+    return item.remove( function( err ) {
+			if( !err ) {
+                console.log( 'Item removed' );
+ 				return response.send( '' );
+ 			} else {
+ 				console.log( err );
+ 			}
+ 		});
+ 	});
 });
 
-//post an item
-app.post( '/api/items', function( request, response ) {
-	var item = new ItemModel({
-		name: request.body.name,
-		description: request.body.description,
-		price: request.body.price,
-		path: request.body.path,
-		stock: request.body.stock
-	});
-	return response.send( item);
-});
