@@ -9,10 +9,10 @@ define([
  		model: ItemModel,
  		url: '/api/items',
 
- 		initialize: function() {
- 			this.collection = new ItemsCollection();
- 			this.collection.fetch({reset: true});
- 			this.render();
- 		}
  	});
+ 	
+ 	var items = new ItemsCollection();
+ 	items.fetch();
+
+ 	console.log(items);
 });

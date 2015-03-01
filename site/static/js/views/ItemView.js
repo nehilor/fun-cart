@@ -5,7 +5,7 @@ define([
   'models/item',
   'collections/items',
   'text!html/fun-item.html'
-], function($, _, Backbone, ItemModel, ItemsCollection, itemTemplate){
+], function($, _, Backbone, ItemModel, ItemCollection, itemTemplate){
 
   var ItemView = Backbone.View.extend({
     el: $("#fun-item"),
