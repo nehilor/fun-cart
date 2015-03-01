@@ -2,10 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  /*'models/item',
-  'collections/item',*/
+  'models/item',
+  'collections/items',
   'text!html/fun-item.html'
-], function($, _, Backbone, /*ItemModel, ItemCollection,*/ itemTemplate){
+], function($, _, Backbone, ItemModel, ItemsCollection, itemTemplate){
 
   var ItemView = Backbone.View.extend({
     el: $("#fun-item"),
