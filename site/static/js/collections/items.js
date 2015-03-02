@@ -15,4 +15,6 @@ define([
  	items.fetch();
 
  	console.log(items);
+
+    return ItemsCollection;	
 });
