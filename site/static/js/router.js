@@ -11,7 +11,7 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Default
-      '*actions': 'defaultAction'
+      '': 'home'
     }
   });
   
@@ -19,7 +19,7 @@ define([
 
     var app_router = new AppRouter;
     
-    app_router.on('route:defaultAction', function (actions) {
+    app_router.on('home', function (actions) {
      
        // We have no matching route, lets display the home page 
         var titleView = new TitleView();
