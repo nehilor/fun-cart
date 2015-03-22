@@ -15,11 +15,13 @@ define([
       var compiledTemplate = _.template( listTemplate );
     
       $("#fun-list").append(compiledTemplate);
-
-      var itemView = new ItemView();
+      var itemView = new ItemView({collection: ItemsCollection});
       itemView.render();
-    }
+      
+    },
+
   });
 
   return ListView;
 });
+      
