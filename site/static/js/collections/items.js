@@ -10,11 +10,9 @@ define([
  		url: '/api/items',
 
  	});
+
+ 	var items = new ItemsCollection(); 
+	items.fetch();
+	items.bind('reset', function () { console.log(items.toJSON()); });
  	
- 	var items = new ItemsCollection();
- 	items.fetch();
-
- 	console.log(items);
-
-    return ItemsCollection;	
 });

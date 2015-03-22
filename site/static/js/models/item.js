@@ -6,11 +6,12 @@ define([
 	var ItemModel = Backbone.Model.extend({
  		
  		defaults: {
- 			name: 'no items yet',
+ 			name: '',
+ 			description: '',
+ 			path: '',
  			price: 0.00,
  			stock: 0
- 		},
-
+ 		}
  	});
  	return ItemModel;
 });

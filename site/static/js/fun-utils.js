@@ -31,5 +31,3 @@ fun.utils.translate = function translate(key) {
  * Alias
  */
 var translate = fun.utils.translate;
-
-

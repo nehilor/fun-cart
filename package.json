@@ -1,5 +1,5 @@
 {
-	"name": "backbone-shopping-cart",
+	"name": "fun-cart",
 	"version": "0.0.1",
 	"description": "A simple Backbone-require app",
 	"dependencies": {
