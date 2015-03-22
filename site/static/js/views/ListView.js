@@ -19,9 +19,41 @@ define([
       itemView.render();
       
     },
-
   });
-
   return ListView;
+  return ItemView;
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****
+    render: function(){
       
+      var compiledTemplate = _.template( listTemplate );
+    
+      $("#fun-list").append(compiledTemplate);
+      this.collection_.each(function(item){
+
+        var itemView = new ItemView({model: item});
+        element.append(itemView.render().el);
+
+      });
+      
+    },
+****/

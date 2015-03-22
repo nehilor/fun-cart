@@ -15,6 +15,6 @@ define([
       $("#fun-item").append(compiledTemplate);
     }
   });
-
   return ItemView;
+  
 });

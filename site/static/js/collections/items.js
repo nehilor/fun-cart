@@ -14,5 +14,7 @@ define([
  	var items = new ItemsCollection(); 
 	items.fetch();
 	items.bind('reset', function () { console.log(items.toJSON()); });
+
+	return ItemsCollection;
  	
 });
